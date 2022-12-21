@@ -1,0 +1,15 @@
+{
+  "name": "cypress2_0",
+  "version": "1.0.0",
+  "description": "Testando Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:open": "./node_modules/.bin/cypress open"
+  },
+  "author": "Wesley Lourenco",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.2.0"
+  }
+}
