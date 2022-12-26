@@ -1,4 +1,5 @@
 import login from '../support/pages/login'
+import admin from '../support/pages/admin'
 /// <reference types="cypress" />
 
 describe('Login Validate', () => {
@@ -6,22 +7,29 @@ describe('Login Validate', () => {
     login.invalidLogin()
   });
   it('Login with right values', () => {
-    cy.login()
+    login.login()
     cy.visit('/web/index.php/dashboard/index')
-    cy.get
+    cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').should('contain','Dashboard')
+    
   });
 })
 
 describe('Logout', () => {
   beforeEach(() => {
-    cy.login()
+    login.login()
     
   });
+
+  it('Admin', () => {
+    admin.adminPageValidation()
+    admin.addUser()
+    
+  });
+
+
+
   it('Logout test', () => {
-    
     login.logout()
-    
-  
     
   })
 })

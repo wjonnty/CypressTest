@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "cy:run": "cypress run",
-    "cy:open": "./node_modules/.bin/cypress open"
+    "cy:open": "ELECTRON_EXTRA_LAUNCH_ARGS=--lang=en npx cypress open"
   },
   "author": "Wesley Lourenco",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "cypress": "^12.2.0"
   }
 }

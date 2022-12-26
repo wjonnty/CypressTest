@@ -4,14 +4,12 @@ Cypress.Commands.add('login',()=>{
     const username=Cypress.env('username')
     const password=Cypress.env('password')
     
-    const login=(username,password)=>{
+    const login=()=>{
         cy.visit('/')
         cy.log(username)
         cy.get('[name="username"]')
-            .clear()
             .type(username)
         cy.get('[name="password"]')
-            .clear()
             .type(password)
 
         cy.get('[type="submit"]').click()
