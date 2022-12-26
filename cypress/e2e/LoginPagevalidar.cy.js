@@ -14,13 +14,13 @@ describe('Login Validate', () => {
   });
 })
 
-describe('Logout', () => {
+describe('Logout and Admin validation', () => {
   beforeEach(() => {
     login.login()
     
   });
 
-  it('Admin', () => {
+  it('Admin page validation and add user test', () => {
     admin.adminPageValidation()
     admin.addUser()
     
